@@ -65,3 +65,25 @@ Three interactive pages: Portfolio Overview (KPIs, revenue trend, top categories
 See docs/images/dashboard_overview.pdf for a full walkthrough.
 
 ## Project Structure
+
+ecommerce-recommendation-system/
+
+|-- data/
+|   |-- raw/              (Olist CSVs - not tracked, download from Kaggle)
+|   `-- cleaned/           (Cleaned master dataset, RFM tables, similarity matrix)
+|-- notebooks/              (01_data_cleaning, 02_eda, 03_sql_analysis, 04_ai_modules)
+|-- sql/                     (SQL scripts and SQLite database)
+|-- powerbi/                  (Power BI dashboard .pbix)
+|-- app/                       (Streamlit app + saved models .pkl)
+`-- docs/images/                 (Charts and dashboard exports)
+
+## Setup
+1. Clone this repo
+2. Create a virtual environment: python -m venv venv
+3. Activate it and run: pip install -r requirements.txt
+4. Download the dataset from the Kaggle link above into data/raw/
+5. Run notebooks in order: 01_data_cleaning -> 02_eda -> 03_sql_analysis -> 04_ai_modules
+6. Launch the app: cd app && streamlit run app.py
+
+## Status
+Complete - all 6 phases finished, from raw data through a deployed interactive AI application.
